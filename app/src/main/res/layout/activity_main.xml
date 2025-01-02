@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+   android:padding="@dimen/_15sdp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="exoplayer2"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRealStories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/raw_exoplayer" />
+
+    <Button
+        android:id="@+id/btnGif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Load GIF"/>
+
+    <Button
+        android:id="@+id/btnVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Video View"/>
+
+    <Button
+        android:id="@+id/btnExoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ExoPlayer 2"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

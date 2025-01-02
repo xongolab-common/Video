@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_140sdp"
+    android:layout_height="@dimen/_185sdp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="@dimen/_2sdp"
+    android:layout_marginHorizontal="@dimen/_7sdp"
+    android:elevation="@dimen/_2sdp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRealStories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:placeholderImage="@drawable/ic_place_holder"
+        app:roundedCornerRadius="@dimen/_10sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@drawable/gradient_background"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRealStoriesName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnPlayRealStories"
+            android:singleLine="false"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentStart="true"
+            tools:text="Cristina Schulze" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPlayRealStories"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_play" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

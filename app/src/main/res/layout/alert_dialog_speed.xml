@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBlackBG"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlackBG"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/_16sdp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDownloadQuality"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tvDownloadQuality"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/radio5X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.5x"
+                android:paddingStart="@dimen/_5sdp"
+               android:textColor="@color/colorWhite"/>
+            <RadioButton
+                android:id="@+id/radio75X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.75x"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/colorWhite"/>
+            <RadioButton
+                android:id="@+id/radio1X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1x Normal"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/colorWhite"/>
+            <RadioButton
+                android:id="@+id/radio125X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.25x"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/colorWhite"/>
+
+            <RadioButton
+                android:id="@+id/radio15X"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5x"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColor="@color/colorWhite"/>
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/_16sdp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubTitle"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_subtitle"
+            tools:itemCount="2"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubTitle"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
